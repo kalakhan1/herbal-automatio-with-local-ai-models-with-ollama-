@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% block title %}Post Images{% endblock %}
+{% block content %}
+<h1>Post Images</h1>
+
+<div class="card">
+  <div class="img-stats" id="img-stats">
+    <div><strong id="stat-assigned">0</strong> assigned</div>
+    <div><strong id="stat-missing">0</strong> missing</div>
+    <div><strong id="stat-total">0</strong> total slots</div>
+  </div>
+  <div class="toolbar">
+    <div class="seg" id="filterSeg">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="missing">Missing</button>
+      <button data-filter="assigned">Assigned</button>
+    </div>
+  </div>
+</div>
+
+<div class="tile-grid" id="tileGrid">
+  <div class="empty">Loading…</div>
+</div>
+
+<div class="pagination" id="pagination"></div>
+{% endblock %}
+{% block scripts %}
+<script>
+let CURRENT_FILTER = 'all';
+let CURRENT_PAGE = 1;
+
+async function loadStats(){
+  const r = await fetch('/api/post-images/stats');
+  const s = await r.json();
+  document.getElementById('stat-assigned').textContent = s.assigned;
+  document.getElementById('stat-missing').textContent = s.missing;
+  document.getElementById('stat-total').textContent = s.total_slots;
+}
+
+async function loadImages(){
+  const r = await fetch(`/api/post-images/list?page=${CURRENT_PAGE}&status=${CURRENT_FILTER}`);
+  const d = await r.json();
+  const grid = document.getElementById('tileGrid');
+  const stamp = Date.now();
+
+  if (!d.items.length) {
+    grid.innerHTML = '<div class="empty">No image slots in this filter.</div>';
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+
+  grid.innerHTML = d.items.map(item => {
+    const previewUrl = item.image
+      ? `/api/post-images/preview/${item.id}?t=${stamp}` : '';
+    const bgStyle = previewUrl ? `background-image:url('${previewUrl}')` : '';
+    const badge = item.image ? '<div class="tile-status ok">✓</div>' : '';
+
+    return `
+      <div class="tile img-slot" data-id="${item.id}">
+        ${badge}
+        <div class="tile-img" style="${bgStyle}"></div>
+        <div class="tile-num">📝</div>
+        <div class="tile-name">
+          <strong>${escapeHtml(item.title)}</strong><br>
+          <span class="small">Post image</span>
+        </div>
+        <div class="tile-actions">
+          <button class="ta-search" title="Search">🔍</button>
+          <button class="ta-upload" title="Upload">⬆</button>
+          ${item.image ? `<button class="ta-remove" title="Remove">✕</button>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Wire actions
+  grid.querySelectorAll('.ta-search').forEach(b => {
+    b.onclick = async e => {
+      e.stopPropagation();
+      const tile = b.closest('.tile');
+      const r = await fetch(`/api/post-images/search-term/${tile.dataset.id}`);
+      const d = await r.json();
+      const url = `https://www.google.com/search?q=${encodeURIComponent(d.term)}&tbm=isch&tbs=sur:fc`;
+      window.open(url, '_blank', 'noopener');
+    };
+  });
+  grid.querySelectorAll('.ta-upload').forEach(b => {
+    b.onclick = e => {
+      e.stopPropagation();
+      const tile = b.closest('.tile');
+      pickFile(parseInt(tile.dataset.id));
+    };
+  });
+  grid.querySelectorAll('.ta-remove').forEach(b => {
+    b.onclick = async e => {
+      e.stopPropagation();
+      const tile = b.closest('.tile');
+      if (!confirm('Remove this image?')) return;
+      await fetch(`/api/post-images/remove/${tile.dataset.id}`, {method:'POST'});
+      toast('Removed'); loadImages(); loadStats();
+    };
+  });
+
+  grid.querySelectorAll('.tile').forEach(tile => {
+    const id = parseInt(tile.dataset.id);
+    ['dragover','dragenter'].forEach(ev => tile.addEventListener(ev, e => {
+      e.preventDefault(); tile.classList.add('over');
+    }));
+    tile.addEventListener('dragleave', () => tile.classList.remove('over'));
+    tile.addEventListener('drop', e => {
+      e.preventDefault(); tile.classList.remove('over');
+      if (e.dataTransfer.files.length) uploadFile(id, e.dataTransfer.files[0]);
+    });
+  });
+
+  const pag = document.getElementById('pagination');
+  pag.innerHTML = `
+    <button id="prevPage" ${CURRENT_PAGE === 1 ? 'disabled' : ''}>‹ Prev</button>
+    <span class="page-info">Page ${d.page} / ${d.total_pages} · ${d.total_slots} slots</span>
+    <button id="nextPage" ${CURRENT_PAGE === d.total_pages ? 'disabled' : ''}>Next ›</button>
+  `;
+  const prev = document.getElementById('prevPage');
+  const next = document.getElementById('nextPage');
+  if (prev) prev.onclick = () => { CURRENT_PAGE--; loadImages(); };
+  if (next) next.onclick = () => { CURRENT_PAGE++; loadImages(); };
+}
+
+function pickFile(id){
+  const inp = document.createElement('input');
+  inp.type = 'file'; inp.accept = 'image/*';
+  inp.onchange = () => { if (inp.files.length) uploadFile(id, inp.files[0]); };
+  inp.click();
+}
+
+async function uploadFile(id, file){
+  const fd = new FormData();
+  fd.append('file', file);
+  toast(`Uploading ${file.name}…`);
+  try {
+    const r = await fetch(`/api/post-images/upload/${id}`, {method:'POST', body: fd});
+    const d = await r.json();
+    if (d.ok) { toast('✓ Uploaded'); loadImages(); loadStats(); }
+    else toast('Failed: ' + (d.error || ''), true);
+  } catch (e) { toast('Error: ' + e.message, true); }
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+document.querySelectorAll('#filterSeg button').forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll('#filterSeg button').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    CURRENT_FILTER = b.dataset.filter;
+    CURRENT_PAGE = 1;
+    loadImages();
+  };
+});
+
+loadStats();
+loadImages();
+</script>
+{% endblock %}

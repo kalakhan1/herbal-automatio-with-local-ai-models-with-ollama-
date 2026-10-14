@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Export{% endblock %}
+{% block content %}
+<h1>Export Data</h1>
+
+<div class="card">
+  <h2>Product CSVs</h2>
+  <button class="btn" onclick="exp('products-without-images')">📄 Products Without Images</button>
+  <button class="btn" onclick="exp('products-with-images')">📄 Products With Images</button>
+</div>
+
+<div class="card">
+  <h2>Blog CSVs</h2>
+  <button class="btn" onclick="exp('blogs-without-images')">📄 Blogs Without Images</button>
+  <button class="btn" onclick="exp('blogs-with-images')">📄 Blogs With Images</button>
+</div>
+
+<div class="card">
+  <h2>Image Manifest</h2>
+  <button class="btn" onclick="exp('manifest')">📄 Image Manifest CSV</button>
+</div>
+
+<div class="card">
+  <h2>Download</h2>
+  <div id="downloads">No files exported yet.</div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+async function exp(endpoint){
+  const r = await fetch(`/api/export/${endpoint}`, {method:'POST'});
+  const d = await r.json();
+  if (d.ok) {
+    toast(`✓ Exported: ${d.path}`);
+    const filename = d.path.split(/[\\/]/).pop();
+    const div = document.getElementById('downloads');
+    div.innerHTML = `<a class="btn" href="/download/${filename}" download>⬇ Download ${filename}</a>`;
+  } else toast('Failed', true);
+}
+</script>
+{% endblock %}

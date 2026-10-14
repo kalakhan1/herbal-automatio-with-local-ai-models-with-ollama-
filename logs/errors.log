@@ -1,0 +1,32 @@
+2026-10-08 23:27:42,579 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:27:47,921 [ERROR] main: Exception on /api/products/generate-batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\routes\products.py", line 144, in generate_batch
+    r = generate_one(p["id"]).get_json()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'get_json'
+2026-10-08 23:30:25,749 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:21,351 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:22,043 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:24,176 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:24,260 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:25,567 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:47,263 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:45,274 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:45,602 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:46,423 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:48,287 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:48,366 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:38:08,966 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:38:42,838 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:38:44,395 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:38:44,576 [ERROR] services.ollama_service: Ollama timeout after 300s

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+<div class="grid" id="statGrid">
+  <div class="stat"><div class="k">Products</div><div class="v" id="s-total">0</div></div>
+  <div class="stat"><div class="k">Pending</div><div class="v" id="s-pending">0</div></div>
+  <div class="stat"><div class="k">Ready</div><div class="v ok" id="s-ready">0</div></div>
+  <div class="stat"><div class="k">Failed</div><div class="v fail" id="s-failed">0</div></div>
+  <div class="stat"><div class="k">Product Articles</div><div class="v" id="s-with_product">0</div></div>
+  <div class="stat"><div class="k">Blog Articles</div><div class="v" id="s-with_blog">0</div></div>
+  <div class="stat"><div class="k">SEO Pass (≥70)</div><div class="v ok" id="s-seo_pass">0</div></div>
+  <div class="stat"><div class="k">SEO Fail</div><div class="v fail" id="s-seo_fail">0</div></div>
+  <div class="stat"><div class="k">Duplicate Fail</div><div class="v fail" id="s-dup_fail">0</div></div>
+</div>
+
+<div class="card">
+  <h2>Ollama Status</h2>
+  <div id="ollama-status">Checking…</div>
+  <button class="btn" onclick="testOllama()">Test Ollama</button>
+</div>
+
+<div class="card">
+  <h2>Quick Actions</h2>
+  <button class="btn" onclick="generateBatch()">⚡ Generate Next Batch</button>
+  <button class="btn secondary" onclick="dedupCheck()">🔍 Run Duplicate Check</button>
+  <button class="btn secondary" onclick="buildLinks()">🔗 Build Internal Links</button>
+  <button class="btn secondary" onclick="refreshStats()">🔄 Refresh</button>
+</div>
+
+<div class="card">
+  <h2>Recent Activity</h2>
+  <div id="recent-logs" class="logs-mini">Loading…</div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+async function refreshStats(){
+  const r = await fetch('/api/stats');
+  const s = await r.json();
+  for (const [k, v] of Object.entries(s)) {
+    const el = document.getElementById('s-' + k);
+    if (el) el.textContent = v;
+  }
+}
+async function testOllama(){
+  const r = await fetch('/api/settings/test-ollama', {method:'POST'});
+  const d = await r.json();
+  document.getElementById('ollama-status').innerHTML =
+    d.ok ? `✅ Connected. Models: ${d.models.join(', ') || 'none'}`
+         : `❌ ${d.message}`;
+}
+async function generateBatch(){
+  toast('Generating batch… this may take a few minutes');
+  const r = await fetch('/api/products/generate-batch', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({limit: 3})
+  });
+  const d = await r.json();
+  toast(d.ok ? `✓ Processed: ${d.processed}, Failed: ${d.failed}` : 'Failed');
+  refreshStats();
+}
+async function dedupCheck(){
+  const r = await fetch('/api/products/dedup-check', {method:'POST'});
+  const d = await r.json();
+  toast(`Checked ${d.checked} products`);
+  refreshStats();
+}
+async function buildLinks(){
+  const r = await fetch('/api/products/build-links', {method:'POST'});
+  const d = await r.json();
+  toast(`Updated ${d.updated} products`);
+}
+async function loadRecentLogs(){
+  const r = await fetch('/api/logs');
+  const logs = await r.json();
+  document.getElementById('recent-logs').innerHTML = logs.slice(0,10)
+    .map(l => `<div class="log-line ${l.level.toLowerCase()}">[${l.level}] ${l.message}</div>`)
+    .join('') || 'No logs yet.';
+}
+refreshStats();
+testOllama();
+loadRecentLogs();
+setInterval(refreshStats, 10000);
+</script>
+{% endblock %}

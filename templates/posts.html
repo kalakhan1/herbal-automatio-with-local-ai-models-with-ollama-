@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block title %}Posts{% endblock %}
+{% block content %}
+<h1>Blog Posts</h1>
+
+<div class="card">
+  <h2>Add New Post</h2>
+  <label>Post Title</label>
+  <input type="text" id="post_title" placeholder="e.g. Badam ke Faide — Complete Guide">
+
+  <label>Raw Content / Reference Material</label>
+  <p class="hint">Paste any article text. System will reformulate it into a unique SEO post.</p>
+  <textarea id="post_content" rows="10"
+    placeholder="Paste any source article here. Minimum 100 characters. Longer is better (500+ words)."></textarea>
+
+  <div class="row">
+    <button class="btn" onclick="addPost()">➕ Add Post</button>
+    <button class="btn secondary" onclick="generateAll()">⚡ Generate All Pending</button>
+    <button class="btn secondary" onclick="dedupCheck()">🔍 Duplicate Check</button>
+    <button class="btn secondary" onclick="clearPosts()">🗑 Clear All</button>
+  </div>
+  <div id="add-result" class="result"></div>
+</div>
+
+<div class="card">
+  <h2>All Posts</h2>
+  <div class="table-wrap">
+    <table id="posts-table">
+      <thead>
+        <tr>
+          <th>ID</th><th>Title</th><th>Status</th><th>Words</th>
+          <th>SEO</th><th>Dup</th><th>Image</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+async function addPost(){
+  const title = document.getElementById('post_title').value.trim();
+  const content = document.getElementById('post_content').value.trim();
+  if (!title || !content) { toast('Title and content required', true); return; }
+  const r = await fetch('/api/posts/add', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({title, content})
+  });
+  const d = await r.json();
+  document.getElementById('add-result').textContent = d.ok
+    ? `✓ Added (ID ${d.id}). Now click Generate on the row.`
+    : '✗ ' + (d.error || 'Failed');
+  if (d.ok) { document.getElementById('post_title').value=''; document.getElementById('post_content').value=''; }
+  loadPosts();
+}
+
+async function generateOne(id){
+  toast(`Generating post ${id}… (may take 5–15 seconds)`);
+  const r = await fetch(`/api/posts/generate/${id}`, {method:'POST'});
+  const d = await r.json();
+  toast(d.ok ? `✓ Done (SEO: ${d.seo_score}, ${d.word_count} words)` : 'Failed: ' + d.error, !d.ok);
+  loadPosts();
+}
+
+async function generateAll(){
+  toast('Generating all pending posts…');
+  const r = await fetch('/api/posts/generate-all', {method:'POST'});
+  const d = await r.json();
+  toast(`✓ ${d.processed} done, ${d.failed} failed`);
+  loadPosts();
+}
+
+async function dedupCheck(){
+  const r = await fetch('/api/posts/dedup-check', {method:'POST'});
+  const d = await r.json();
+  toast(`Checked ${d.checked} posts`);
+  loadPosts();
+}
+
+async function delPost(id){
+  if (!confirm('Delete this post?')) return;
+  await fetch(`/api/posts/delete/${id}`, {method:'POST'});
+  loadPosts();
+}
+
+async function clearPosts(){
+  if (!confirm('Delete ALL posts?')) return;
+  await fetch('/api/posts/clear', {method:'POST'});
+  loadPosts();
+}
+
+async function loadPosts(){
+  const r = await fetch('/api/posts');
+  const items = await r.json();
+  const tbody = document.querySelector('#posts-table tbody');
+  tbody.innerHTML = items.map(p => {
+    const img = p.image ? '✓' : '—';
+    const dup = p.duplicate_score ? p.duplicate_score.toFixed(2) : '0.00';
+    return `
+      <tr>
+        <td>${p.id}</td>
+        <td>${escapeHtml(p.title)}</td>
+        <td><span class="badge ${p.status.toLowerCase()}">${p.status}</span></td>
+        <td>${p.word_count || 0}</td>
+        <td>${p.seo_score || 0}</td>
+        <td>${dup}</td>
+        <td>${img}</td>
+        <td>
+          <button class="btn-xs" onclick="generateOne(${p.id})">Generate</button>
+          <button class="btn-xs" onclick="delPost(${p.id})" style="background:#7f1d1d;color:#fecaca">Delete</button>
+        </td>
+      </tr>
+    `;
+  }).join('') || '<tr><td colspan="8" class="empty">No posts yet.</td></tr>';
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+loadPosts();
+</script>
+{% endblock %}

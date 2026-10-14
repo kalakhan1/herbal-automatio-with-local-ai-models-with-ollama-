@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Products{% endblock %}
+{% block content %}
+<h1>Products</h1>
+
+<div class="card">
+  <h2>Paste Product Names</h2>
+  <p class="hint">Comma-separated. Example: Badam, Kalonji, Ajwain, Honey</p>
+  <textarea id="names" rows="6" placeholder="Badam, Kalonji, Ajwain, Honey, Arq-e-Gulab"></textarea>
+  <div class="row">
+    <button class="btn" onclick="addProducts()">✅ Add Products</button>
+    <button class="btn secondary" onclick="clearAll()">🗑 Clear All</button>
+    <button class="btn secondary" onclick="generateBatch()">⚡ Generate Batch</button>
+  </div>
+  <div id="add-result" class="result"></div>
+</div>
+
+<div class="card">
+  <h2>Product List</h2>
+  <div class="table-wrap">
+    <table id="prod-table">
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Slug</th><th>Status</th>
+            <th>Words</th><th>SEO</th><th>Actions</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+async function addProducts(){
+  const names = document.getElementById('names').value;
+  if (!names.trim()) { toast('Paste some names first', true); return; }
+  const r = await fetch('/api/products/add', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({names})
+  });
+  const d = await r.json();
+  document.getElementById('add-result').textContent =
+    d.ok ? `✓ Detected: ${d.detected}, Unique: ${d.unique}, Added: ${d.added}` : d.error;
+  loadProducts();
+}
+async function clearAll(){
+  if (!confirm('Delete all products?')) return;
+  await fetch('/api/products/clear', {method:'POST'});
+  loadProducts();
+}
+async function generateBatch(){
+  toast('Generating… this may take 2–5 minutes');
+  const r = await fetch('/api/products/generate-batch', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({limit: 3})
+  });
+  const d = await r.json();
+  toast(`Processed: ${d.processed}, Failed: ${d.failed}`);
+  loadProducts();
+}
+async function genOne(id){
+  toast(`Generating product ${id}…`);
+  const r = await fetch(`/api/products/generate/${id}`, {method:'POST'});
+  const d = await r.json();
+  toast(d.ok ? `✓ Done (SEO: ${d.seo_score})` : 'Failed: ' + d.error, !d.ok);
+  loadProducts();
+}
+async function loadProducts(){
+  const r = await fetch('/api/products');
+  const items = await r.json();
+  const tbody = document.querySelector('#prod-table tbody');
+  tbody.innerHTML = items.map(p => `
+    <tr>
+      <td>${p.id}</td>
+      <td>${p.name}</td>
+      <td><code>${p.slug}</code></td>
+      <td><span class="badge ${p.status.toLowerCase()}">${p.status}</span></td>
+      <td>${p.product_word_count || 0}</td>
+      <td>${p.seo_score || 0}</td>
+      <td><button class="btn-xs" onclick="genOne(${p.id})">Generate</button></td>
+    </tr>
+  `).join('') || '<tr><td colspan="7" class="empty">No products yet.</td></tr>';
+}
+loadProducts();
+</script>
+{% endblock %}

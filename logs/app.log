@@ -1,0 +1,619 @@
+2026-10-08 21:24:59,088 [INFO] database: Database initialized
+2026-10-08 21:25:38,133 [INFO] __main__: ============================================================
+2026-10-08 21:25:38,134 [INFO] __main__: Herbal Content Automation System
+2026-10-08 21:25:38,135 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-08 21:25:38,136 [INFO] __main__: Ollama: http://localhost:11434 (model: qwen2.5-coder:3b)
+2026-10-08 21:25:38,137 [INFO] __main__: Test mode: True
+2026-10-08 21:25:38,138 [INFO] __main__: ============================================================
+2026-10-08 21:25:38,216 [INFO] werkzeug: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-10-08 21:25:38,217 [INFO] werkzeug: Press CTRL+C to quit
+2026-10-08 21:26:07,885 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:07] "GET / HTTP/1.1" 200 -
+2026-10-08 21:26:08,306 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:08] "GET /static/style.css HTTP/1.1" 200 -
+2026-10-08 21:26:08,347 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:08] "GET /static/app.js HTTP/1.1" 200 -
+2026-10-08 21:26:08,800 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:08] "GET /favicon.ico HTTP/1.1" 404 -
+2026-10-08 21:26:32,437 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:32] "GET /products HTTP/1.1" 200 -
+2026-10-08 21:26:32,488 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:32] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 21:26:32,587 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:32] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 21:26:35,046 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:35] "GET /export HTTP/1.1" 200 -
+2026-10-08 21:26:35,134 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:35] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 21:26:35,182 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:35] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 21:26:52,865 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:52] "GET /settings HTTP/1.1" 200 -
+2026-10-08 21:26:52,900 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:52] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 21:26:52,959 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:26:52] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 21:30:23,181 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:30:23] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 21:30:26,057 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 21:30:26] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+2026-10-08 22:44:40,185 [INFO] database: Database initialized
+2026-10-08 22:45:04,807 [INFO] __main__: ============================================================
+2026-10-08 22:45:04,808 [INFO] __main__: Herbal Content Automation System
+2026-10-08 22:45:04,809 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-08 22:45:04,809 [INFO] __main__: Ollama: http://localhost:11434 (model: llama3.2:3b)
+2026-10-08 22:45:04,810 [INFO] __main__: Test mode: True
+2026-10-08 22:45:04,810 [INFO] __main__: ============================================================
+2026-10-08 22:45:04,892 [INFO] werkzeug: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-10-08 22:45:04,893 [INFO] werkzeug: Press CTRL+C to quit
+2026-10-08 22:45:36,639 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:36] "GET /settings HTTP/1.1" 200 -
+2026-10-08 22:45:37,074 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:37] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 22:45:37,080 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:37] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 22:45:43,138 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:43] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 22:45:54,812 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:54] "GET / HTTP/1.1" 200 -
+2026-10-08 22:45:54,852 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:54] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 22:45:54,886 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:54] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 22:45:54,990 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:54] "GET /api/logs HTTP/1.1" 200 -
+2026-10-08 22:45:54,998 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:54] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 22:45:57,052 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:45:57] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 22:46:04,951 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:04] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 22:46:14,961 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:14] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 22:46:16,907 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:16] "GET /products HTTP/1.1" 200 -
+2026-10-08 22:46:16,947 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:16] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 22:46:16,956 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:16] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 22:46:17,069 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:17] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 22:46:26,939 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:26] "GET /export HTTP/1.1" 200 -
+2026-10-08 22:46:26,981 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:26] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 22:46:27,022 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:27] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 22:46:29,496 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:29] "GET /settings HTTP/1.1" 200 -
+2026-10-08 22:46:29,547 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:29] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 22:46:29,549 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:29] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 22:46:32,456 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:32] "GET /logs HTTP/1.1" 200 -
+2026-10-08 22:46:32,509 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:32] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 22:46:32,541 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:32] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 22:46:32,592 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:32] "GET /api/logs HTTP/1.1" 200 -
+2026-10-08 22:46:36,202 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:36] "GET / HTTP/1.1" 200 -
+2026-10-08 22:46:36,305 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:36] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 22:46:36,319 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:36] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 22:46:36,420 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:36] "GET /api/logs HTTP/1.1" 200 -
+2026-10-08 22:46:36,438 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:36] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 22:46:38,159 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:38] "GET /products HTTP/1.1" 200 -
+2026-10-08 22:46:38,217 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:38] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 22:46:38,274 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:38] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 22:46:38,323 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:38] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 22:46:38,470 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 22:46:38] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 23:05:35,577 [INFO] database: Migrated: added wp_post_id
+2026-10-08 23:05:35,614 [INFO] database: Migrated: added wp_product_url
+2026-10-08 23:05:48,405 [INFO] __main__: ============================================================
+2026-10-08 23:05:48,407 [INFO] __main__: Herbal Content Automation System — Phase 2
+2026-10-08 23:05:48,409 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-08 23:05:48,411 [INFO] __main__: Ollama: http://localhost:11434 (model: llama3.2:3b)
+2026-10-08 23:05:48,412 [INFO] __main__: Test mode: True
+2026-10-08 23:05:48,413 [INFO] __main__: ============================================================
+2026-10-08 23:05:48,520 [INFO] werkzeug: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-10-08 23:05:48,521 [INFO] werkzeug: Press CTRL+C to quit
+2026-10-08 23:06:28,109 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:28] "GET /images HTTP/1.1" 200 -
+2026-10-08 23:06:28,492 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:28] "GET /static/style.css HTTP/1.1" 200 -
+2026-10-08 23:06:28,505 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:28] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:06:28,586 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:28] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-08 23:06:28,589 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:28] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-08 23:06:33,840 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:33] "GET /products HTTP/1.1" 200 -
+2026-10-08 23:06:33,912 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:33] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:06:33,986 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:33] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:06:34,039 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:34] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:06:42,484 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:42] "POST /api/products/clear HTTP/1.1" 200 -
+2026-10-08 23:06:42,524 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:42] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:06:51,512 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:51] "GET /images HTTP/1.1" 200 -
+2026-10-08 23:06:51,599 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:51] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:06:51,626 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:51] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:06:51,731 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:51] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-08 23:06:51,742 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:06:51] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-08 23:07:01,145 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:01] "GET /export HTTP/1.1" 200 -
+2026-10-08 23:07:01,196 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:01] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:07:01,213 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:01] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:07:03,340 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:03] "GET /wordpress HTTP/1.1" 200 -
+2026-10-08 23:07:03,390 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:03] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:07:03,409 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:03] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:07:07,375 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:07] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:17,724 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:17] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:19,488 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:19] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:20,145 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:20] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:20,768 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:20] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:21,323 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:21] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:21,668 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:21] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:22,023 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:22] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:22,323 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:22] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:22,608 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:22] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:22,901 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:22] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:23,167 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:23] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:23,442 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:23] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:23,719 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:23] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:23,965 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:23] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:24,176 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:24] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:24,413 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:24] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:24,625 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:24] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:24,848 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:24] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:25,069 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:25] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:25,301 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:25] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:25,544 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:25] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:25,789 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:25] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:26,048 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:26] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:26,312 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:26] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:26,573 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:26] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:26,833 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:26] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:27,034 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:27] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:27,288 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:27] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:27,559 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:27] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:27,836 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:27] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:28,045 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:28] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:28,262 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:28] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:28,512 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:28] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:28,766 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:28] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:29,047 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:29] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:29,333 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:29] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:07:29,601 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:07:29] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:14:19,668 [INFO] __main__: ============================================================
+2026-10-08 23:14:19,669 [INFO] __main__: Herbal Content Automation System — Phase 2
+2026-10-08 23:14:19,669 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-08 23:14:19,670 [INFO] __main__: Ollama: http://localhost:11434 (model: llama3.2:3b)
+2026-10-08 23:14:19,671 [INFO] __main__: Test mode: True
+2026-10-08 23:14:19,671 [INFO] __main__: ============================================================
+2026-10-08 23:14:19,750 [INFO] werkzeug: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-10-08 23:14:19,751 [INFO] werkzeug: Press CTRL+C to quit
+2026-10-08 23:14:45,046 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:45] "GET /wordpress HTTP/1.1" 200 -
+2026-10-08 23:14:45,430 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:45] "GET /static/style.css HTTP/1.1" 200 -
+2026-10-08 23:14:45,494 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:45] "GET /static/app.js HTTP/1.1" 200 -
+2026-10-08 23:14:45,581 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:45] "GET /favicon.ico HTTP/1.1" 404 -
+2026-10-08 23:14:46,380 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:46] "GET /wordpress HTTP/1.1" 200 -
+2026-10-08 23:14:46,467 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:46] "GET /static/style.css HTTP/1.1" 200 -
+2026-10-08 23:14:46,496 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:46] "GET /static/app.js HTTP/1.1" 200 -
+2026-10-08 23:14:46,598 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:46] "GET /favicon.ico HTTP/1.1" 404 -
+2026-10-08 23:14:47,249 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:47] "GET /wordpress HTTP/1.1" 200 -
+2026-10-08 23:14:47,333 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:47] "GET /static/style.css HTTP/1.1" 200 -
+2026-10-08 23:14:47,353 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:47] "GET /static/app.js HTTP/1.1" 200 -
+2026-10-08 23:14:47,455 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:14:47] "GET /favicon.ico HTTP/1.1" 404 -
+2026-10-08 23:15:02,014 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:02] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-08 23:15:12,238 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:12] "GET /settings HTTP/1.1" 200 -
+2026-10-08 23:15:12,284 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:12] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:15:12,323 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:12] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:15:18,392 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:18] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 23:15:20,821 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:20] "GET /logs HTTP/1.1" 200 -
+2026-10-08 23:15:20,921 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:20] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:15:20,935 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:20] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 23:15:20,955 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:20] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:15:21,236 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:21] "GET /api/logs HTTP/1.1" 200 -
+2026-10-08 23:15:24,666 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:24] "GET /settings HTTP/1.1" 200 -
+2026-10-08 23:15:24,780 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:24] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:15:24,886 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:24] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:15:25,622 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:25] "GET /export HTTP/1.1" 200 -
+2026-10-08 23:15:25,689 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:25] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:15:25,731 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:25] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:15:27,441 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:27] "GET /images HTTP/1.1" 200 -
+2026-10-08 23:15:27,506 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:27] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:15:27,562 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:27] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:15:27,627 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:27] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-08 23:15:27,662 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:27] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-08 23:15:28,354 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:28] "GET /products HTTP/1.1" 200 -
+2026-10-08 23:15:28,412 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:28] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:15:28,442 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:28] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:15:28,523 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:28] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:15:32,709 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:32] "GET / HTTP/1.1" 200 -
+2026-10-08 23:15:32,766 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:32] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:15:32,806 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:32] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:15:32,914 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:32] "GET /api/logs HTTP/1.1" 200 -
+2026-10-08 23:15:32,929 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:32] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:15:35,360 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:35] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 23:15:42,865 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:42] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:15:53,138 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:15:53] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:16:03,129 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:16:03] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:16:13,169 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:16:13] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:16:23,355 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:16:23] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:16:33,145 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:16:33] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:16:43,292 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:16:43] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:17:20,202 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:17:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:18:20,262 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:18:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:19:20,147 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:19:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:20:20,992 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:20:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:21:20,347 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:21:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:22:05,353 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:22:05] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:22:08,410 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:22:08] "GET /products HTTP/1.1" 200 -
+2026-10-08 23:22:08,480 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:22:08] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:22:08,495 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:22:08] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:22:08,584 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:22:08] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:22:15,824 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:22:15] "POST /api/products/add HTTP/1.1" 200 -
+2026-10-08 23:22:15,869 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:22:15] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:22:40,198 [WARNING] services.research_service: Search failed for 'Badam herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:23:08,596 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:08] "GET /settings HTTP/1.1" 200 -
+2026-10-08 23:23:12,132 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:12] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:23:12,290 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:12] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:23:22,065 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:22] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 23:23:23,599 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:23] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 23:23:26,302 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:26] "GET /products HTTP/1.1" 200 -
+2026-10-08 23:23:27,417 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:27] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:23:28,419 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:28] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:23:31,429 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:23:31] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:25:23,464 [WARNING] services.research_service: Search failed for 'Kalonji herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:26:27,291 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:27] "GET / HTTP/1.1" 200 -
+2026-10-08 23:26:27,895 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:27] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:26:28,044 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:28] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:26:28,633 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:28] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:26:28,742 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:28] "GET /api/logs HTTP/1.1" 200 -
+2026-10-08 23:26:31,172 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:31] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 23:26:38,502 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:38] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:26:48,673 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:48] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:26:51,524 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:51] "GET /products HTTP/1.1" 200 -
+2026-10-08 23:26:51,918 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:51] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:26:52,167 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:52] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-08 23:26:53,435 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:26:53] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:27:18,905 [WARNING] services.research_service: Search failed for 'Ajwain herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:27:20,002 [WARNING] services.research_service: Search failed for 'Honey herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:27:21,802 [WARNING] services.research_service: Search failed for 'Arq-e-Gulab herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:27:21,974 [WARNING] services.research_service: Search failed for 'Saunf herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:27:23,219 [WARNING] services.research_service: Search failed for 'Sonth herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:27:42,579 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:27:42,971 [WARNING] services.research_service: Search failed for 'Haldi herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:27:47,921 [ERROR] main: Exception on /api/products/generate-batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\sktpa\OneDrive\Desktop\herbal_automation\routes\products.py", line 144, in generate_batch
+    r = generate_one(p["id"]).get_json()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'get_json'
+2026-10-08 23:27:48,588 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:27:48] "POST /api/products/generate-batch HTTP/1.1" 500 -
+2026-10-08 23:30:25,749 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:30:26,188 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:30:26] "POST /api/products/generate/2 HTTP/1.1" 500 -
+2026-10-08 23:32:21,351 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:21,920 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:21] "POST /api/products/generate/3 HTTP/1.1" 500 -
+2026-10-08 23:32:22,043 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:23,302 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:23] "POST /api/products/generate/4 HTTP/1.1" 500 -
+2026-10-08 23:32:24,176 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:24,260 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:24,425 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:24] "POST /api/products/generate/5 HTTP/1.1" 500 -
+2026-10-08 23:32:24,673 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:24] "GET /images HTTP/1.1" 200 -
+2026-10-08 23:32:24,680 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:24] "POST /api/products/generate/6 HTTP/1.1" 500 -
+2026-10-08 23:32:25,567 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:25,797 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:25] "POST /api/products/generate/7 HTTP/1.1" 500 -
+2026-10-08 23:32:26,418 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:26] "GET / HTTP/1.1" 200 -
+2026-10-08 23:32:29,675 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:29] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:32:43,138 [WARNING] services.research_service: Search failed for 'Dalchini herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:32:43,450 [WARNING] services.research_service: Search failed for 'Mulethi herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:32:44,102 [WARNING] services.research_service: Search failed for 'Ispaghol herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:32:45,328 [WARNING] services.research_service: Search failed for 'Mulethi herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:32:45,467 [WARNING] services.research_service: Search failed for 'Dalchini herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:32:47,263 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:32:47,278 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:47] "POST /api/products/generate/8 HTTP/1.1" 500 -
+2026-10-08 23:32:48,547 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:32:48] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:33:06,140 [WARNING] services.research_service: Search failed for 'Methi Dana herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:33:25,090 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:25] "GET /products HTTP/1.1" 200 -
+2026-10-08 23:33:26,246 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:26] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:33:26,392 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:26] "GET /static/app.js HTTP/1.1" 200 -
+2026-10-08 23:33:26,570 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:26] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:33:26,788 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:26] "GET /static/app.js HTTP/1.1" 200 -
+2026-10-08 23:33:27,482 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:27] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:33:28,065 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:28] "GET /api/logs HTTP/1.1" 200 -
+2026-10-08 23:33:28,230 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:28] "GET /api/products HTTP/1.1" 200 -
+2026-10-08 23:33:29,987 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:29] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-08 23:33:40,579 [WARNING] services.research_service: Search failed for 'Pudina herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:33:41,808 [WARNING] services.research_service: Search failed for 'Lahsun herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:33:42,206 [WARNING] services.research_service: Search failed for 'Adrak herbal uses benefits information': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=15)
+2026-10-08 23:33:58,313 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:33:58] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:34:07,162 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:34:07] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:34:17,202 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:34:17] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:34:27,147 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:34:27] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:34:37,193 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:34:37] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:34:47,671 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:34:47] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:34:57,202 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:34:57] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:35:07,543 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:35:07] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-08 23:35:08,543 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:35:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+2026-10-08 23:35:14,261 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:35:14] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:35:17,146 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:35:17] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:36:18,664 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:36:18] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:37:20,172 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:37:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:37:45,274 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:45,420 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:37:45] "POST /api/products/generate/9 HTTP/1.1" 500 -
+2026-10-08 23:37:45,602 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:46,170 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:37:46] "POST /api/products/generate/10 HTTP/1.1" 500 -
+2026-10-08 23:37:46,423 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:48,287 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:48,366 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:37:49,168 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:37:49] "POST /api/products/generate/11 HTTP/1.1" 500 -
+2026-10-08 23:37:49,420 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:37:49] "POST /api/products/generate/10 HTTP/1.1" 500 -
+2026-10-08 23:37:49,810 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:37:49] "POST /api/products/generate/9 HTTP/1.1" 500 -
+2026-10-08 23:38:08,966 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:38:08,979 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:38:08] "POST /api/products/generate/12 HTTP/1.1" 500 -
+2026-10-08 23:38:21,801 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:38:21] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:38:42,838 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:38:44,395 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:38:44,576 [ERROR] services.ollama_service: Ollama timeout after 300s
+2026-10-08 23:38:44,949 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:38:44] "POST /api/products/generate/15 HTTP/1.1" 500 -
+2026-10-08 23:38:47,052 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:38:47] "POST /api/products/generate/16 HTTP/1.1" 500 -
+2026-10-08 23:38:47,099 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:38:47] "POST /api/products/generate/17 HTTP/1.1" 500 -
+2026-10-08 23:39:20,178 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:39:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:40:20,167 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:40:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-08 23:41:20,161 [INFO] werkzeug: 127.0.0.1 - - [08/Oct/2026 23:41:20] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:10:02,195 [INFO] __main__: ============================================================
+2026-10-09 11:10:02,197 [INFO] __main__: Herbal Content Automation System — Phase 2
+2026-10-09 11:10:02,198 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-09 11:10:02,199 [INFO] __main__: Ollama: http://localhost:11434 (model: llama3.2:3b)
+2026-10-09 11:10:02,200 [INFO] __main__: Test mode: True
+2026-10-09 11:10:02,276 [INFO] __main__: ============================================================
+2026-10-09 11:10:02,881 [INFO] werkzeug: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-10-09 11:10:02,881 [INFO] werkzeug: Press CTRL+C to quit
+2026-10-09 11:10:42,013 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:10:42] "GET /products HTTP/1.1" 200 -
+2026-10-09 11:10:44,744 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:10:44] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:10:45,073 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:10:45] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:10:45,373 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:10:45] "GET /api/products HTTP/1.1" 200 -
+2026-10-09 11:10:45,492 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:10:45] "GET /favicon.ico HTTP/1.1" 404 -
+2026-10-09 11:10:51,018 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:10:51] "POST /api/products/clear HTTP/1.1" 200 -
+2026-10-09 11:10:51,468 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:10:51] "GET /api/products HTTP/1.1" 200 -
+2026-10-09 11:11:11,776 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:11:11] "POST /api/products/add HTTP/1.1" 200 -
+2026-10-09 11:11:12,376 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:11:12] "GET /api/products HTTP/1.1" 200 -
+2026-10-09 11:14:36,998 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:36] "GET / HTTP/1.1" 200 -
+2026-10-09 11:14:37,246 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:37] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:14:37,495 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:37] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:14:38,005 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:38] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:14:38,255 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:38] "GET /api/logs HTTP/1.1" 200 -
+2026-10-09 11:14:40,589 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:40] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-09 11:14:47,751 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:47] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:14:48,363 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:48] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-09 11:14:57,755 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:57] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:14:58,276 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:14:58] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-09 11:15:01,441 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:01] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-09 11:15:08,001 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:08] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:15:18,259 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:18] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:15:27,756 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:27] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:15:32,885 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:32] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-09 11:15:36,344 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:36] "GET /settings HTTP/1.1" 200 -
+2026-10-09 11:15:36,871 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:36] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:15:36,995 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:36] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:15:42,753 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:42] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-09 11:15:50,913 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:50] "GET /logs HTTP/1.1" 200 -
+2026-10-09 11:15:51,625 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:51] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:15:51,996 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:51] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:15:52,576 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:52] "GET /api/logs HTTP/1.1" 200 -
+2026-10-09 11:15:54,715 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:54] "GET /wordpress HTTP/1.1" 200 -
+2026-10-09 11:15:54,891 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:54] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:15:55,379 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:15:55] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:16:07,588 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:16:07] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-09 11:16:16,758 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:16:16] "POST /api/wp/upload-images HTTP/1.1" 200 -
+2026-10-09 11:16:36,868 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:16:36] "GET /products HTTP/1.1" 200 -
+2026-10-09 11:16:37,622 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:16:37] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:16:37,997 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:16:37] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:16:38,748 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:16:38] "GET /api/products HTTP/1.1" 200 -
+2026-10-09 11:22:01,500 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:22:01] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:22:02,242 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:22:02] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+2026-10-09 11:22:43,394 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:22:43] "POST /api/products/generate/21 HTTP/1.1" 200 -
+2026-10-09 11:27:08,721 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:27:08] "POST /api/products/generate/22 HTTP/1.1" 200 -
+2026-10-09 11:58:19,600 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:19] "GET / HTTP/1.1" 200 -
+2026-10-09 11:58:19,663 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:19] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:58:19,690 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:19] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:58:19,789 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:19] "GET /api/logs HTTP/1.1" 200 -
+2026-10-09 11:58:19,802 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:19] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:58:21,819 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:21] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-09 11:58:29,734 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:29] "GET /api/stats HTTP/1.1" 200 -
+2026-10-09 11:58:37,770 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:37] "GET /images HTTP/1.1" 200 -
+2026-10-09 11:58:37,813 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:37] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:58:37,825 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:37] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:58:37,910 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:37] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-09 11:58:37,918 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:37] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-09 11:58:57,000 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:56] "GET /export HTTP/1.1" 200 -
+2026-10-09 11:58:57,027 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:57] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:58:57,096 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:57] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:58:58,712 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:58] "GET /wordpress HTTP/1.1" 200 -
+2026-10-09 11:58:58,787 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:58] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:58:58,791 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:58:58] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:59:00,599 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:00] "GET /settings HTTP/1.1" 200 -
+2026-10-09 11:59:00,647 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:00] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:59:00,661 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:00] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:59:02,588 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:02] "GET /logs HTTP/1.1" 200 -
+2026-10-09 11:59:02,663 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:02] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:59:02,664 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:02] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:59:02,712 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:02] "GET /api/logs HTTP/1.1" 200 -
+2026-10-09 11:59:04,552 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:04] "GET /wordpress HTTP/1.1" 200 -
+2026-10-09 11:59:04,611 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:04] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:59:04,630 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:04] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:59:05,754 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:05] "GET /export HTTP/1.1" 200 -
+2026-10-09 11:59:05,826 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:05] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:59:05,832 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:05] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:59:07,232 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:07] "GET /images HTTP/1.1" 200 -
+2026-10-09 11:59:07,364 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:07] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:59:07,451 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:07] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:59:07,784 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:07] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-09 11:59:07,815 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:07] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-09 11:59:13,515 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:13] "GET /export HTTP/1.1" 200 -
+2026-10-09 11:59:13,598 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:13] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:59:13,603 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:13] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:59:27,743 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:27] "GET /images HTTP/1.1" 200 -
+2026-10-09 11:59:27,818 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:27] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 11:59:27,829 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:27] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 11:59:27,892 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:27] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-09 11:59:27,901 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:27] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-09 11:59:30,874 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:30] "GET /api/images/search-term/21/product HTTP/1.1" 200 -
+2026-10-09 11:59:41,540 [INFO] services.image_service: Converted _badam-product.jpg → badam-product.webp
+2026-10-09 11:59:41,554 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:41] "POST /api/images/upload/21/product HTTP/1.1" 200 -
+2026-10-09 11:59:41,613 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:41] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-09 11:59:41,614 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:41] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-09 11:59:41,717 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:41] "GET /api/images/preview/21/product?t=1791529181635 HTTP/1.1" 200 -
+2026-10-09 11:59:43,117 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:43] "GET /api/images/search-term/21/blog HTTP/1.1" 200 -
+2026-10-09 11:59:50,571 [INFO] services.image_service: Converted _badam-blog.jpg → badam-blog.webp
+2026-10-09 11:59:50,595 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:50] "POST /api/images/upload/21/blog HTTP/1.1" 200 -
+2026-10-09 11:59:50,794 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:50] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-09 11:59:50,803 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:50] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-09 11:59:50,955 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:50] "GET /api/images/preview/21/product?t=1791529190925 HTTP/1.1" 200 -
+2026-10-09 11:59:51,039 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:51] "GET /api/images/preview/21/blog?t=1791529190925 HTTP/1.1" 200 -
+2026-10-09 11:59:52,649 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 11:59:52] "GET /api/images/search-term/22/product HTTP/1.1" 200 -
+2026-10-09 12:00:29,414 [INFO] services.image_service: Converted _kalonji-product.jpg → kalonji-product.webp
+2026-10-09 12:00:29,433 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:00:29] "POST /api/images/upload/22/product HTTP/1.1" 200 -
+2026-10-09 12:00:29,486 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:00:29] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-09 12:00:29,488 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:00:29] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-09 12:00:29,547 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:00:29] "GET /api/images/preview/21/product?t=1791529229504 HTTP/1.1" 200 -
+2026-10-09 12:00:29,554 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:00:29] "GET /api/images/preview/21/blog?t=1791529229504 HTTP/1.1" 200 -
+2026-10-09 12:00:29,649 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:00:29] "GET /api/images/preview/22/product?t=1791529229504 HTTP/1.1" 200 -
+2026-10-09 12:00:31,110 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:00:31] "GET /api/images/search-term/22/blog HTTP/1.1" 200 -
+2026-10-09 12:01:24,884 [INFO] services.image_service: Converted _kalonji-blog.jpg → kalonji-blog.webp
+2026-10-09 12:01:24,899 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:24] "POST /api/images/upload/22/blog HTTP/1.1" 200 -
+2026-10-09 12:01:24,926 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:24] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-09 12:01:24,942 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:24] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-09 12:01:25,003 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:25] "GET /api/images/preview/21/product?t=1791529284958 HTTP/1.1" 200 -
+2026-10-09 12:01:25,012 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:25] "GET /api/images/preview/21/blog?t=1791529284958 HTTP/1.1" 200 -
+2026-10-09 12:01:25,023 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:25] "GET /api/images/preview/22/product?t=1791529284958 HTTP/1.1" 200 -
+2026-10-09 12:01:25,074 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:25] "GET /api/images/preview/22/blog?t=1791529284958 HTTP/1.1" 200 -
+2026-10-09 12:01:32,328 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:32] "GET /export HTTP/1.1" 200 -
+2026-10-09 12:01:32,388 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:32] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:01:32,403 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:32] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:01:37,511 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:37] "GET /products HTTP/1.1" 200 -
+2026-10-09 12:01:37,569 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:37] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:01:37,592 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:37] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:01:37,655 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:01:37] "GET /api/products HTTP/1.1" 200 -
+2026-10-09 12:02:14,088 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /images HTTP/1.1" 200 -
+2026-10-09 12:02:14,155 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:02:14,176 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:02:14,235 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-09 12:02:14,255 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-09 12:02:14,297 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /api/images/preview/21/product?t=1791529334261 HTTP/1.1" 200 -
+2026-10-09 12:02:14,316 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /api/images/preview/21/blog?t=1791529334261 HTTP/1.1" 200 -
+2026-10-09 12:02:14,321 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /api/images/preview/22/blog?t=1791529334261 HTTP/1.1" 200 -
+2026-10-09 12:02:14,324 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:14] "GET /api/images/preview/22/product?t=1791529334261 HTTP/1.1" 200 -
+2026-10-09 12:02:18,728 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:18] "GET /export HTTP/1.1" 200 -
+2026-10-09 12:02:18,789 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:18] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:02:18,795 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:18] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:02:23,896 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:23] "GET /wordpress HTTP/1.1" 200 -
+2026-10-09 12:02:23,984 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:23] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:02:23,985 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:23] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:02:39,430 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:39] "POST /api/wp/test HTTP/1.1" 200 -
+2026-10-09 12:02:42,472 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:42] "GET /settings HTTP/1.1" 200 -
+2026-10-09 12:02:42,534 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:42] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:02:42,535 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:42] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:02:59,192 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:59] "GET /logs HTTP/1.1" 200 -
+2026-10-09 12:02:59,276 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:59] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:02:59,282 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:59] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:02:59,329 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:02:59] "GET /api/logs HTTP/1.1" 200 -
+2026-10-09 12:03:02,151 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:02] "GET /products HTTP/1.1" 200 -
+2026-10-09 12:03:02,207 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:02] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:03:02,214 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:02] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:03:02,285 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:02] "GET /api/products HTTP/1.1" 200 -
+2026-10-09 12:03:10,040 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:10] "GET /export HTTP/1.1" 200 -
+2026-10-09 12:03:10,114 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:10] "GET /static/app.js HTTP/1.1" 304 -
+2026-10-09 12:03:10,115 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:10] "GET /static/style.css HTTP/1.1" 304 -
+2026-10-09 12:03:15,509 [INFO] services.csv_service: Exported 2 products to C:\Users\sktpa\OneDrive\Desktop\herbal_automation\output\products_with_images.csv
+2026-10-09 12:03:15,510 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:15] "POST /api/export/products-with-images HTTP/1.1" 200 -
+2026-10-09 12:03:21,039 [INFO] services.csv_service: Exported blogs for 2 products to C:\Users\sktpa\OneDrive\Desktop\herbal_automation\output\blogs_with_images.csv
+2026-10-09 12:03:21,040 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:03:21] "POST /api/export/blogs-with-images HTTP/1.1" 200 -
+2026-10-09 12:05:46,751 [INFO] services.csv_service: Exported 2 products to C:\Users\sktpa\OneDrive\Desktop\herbal_automation\output\products_with_images.csv
+2026-10-09 12:05:46,752 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:05:46] "POST /api/export/products-with-images HTTP/1.1" 200 -
+2026-10-09 12:05:59,861 [INFO] services.csv_service: Exported 2 products to C:\Users\sktpa\OneDrive\Desktop\herbal_automation\output\products_with_images.csv
+2026-10-09 12:05:59,863 [INFO] werkzeug: 127.0.0.1 - - [09/Oct/2026 12:05:59] "POST /api/export/products-with-images HTTP/1.1" 200 -
+2026-10-09 22:08:16,132 [INFO] database: Database initialized
+2026-10-09 22:09:31,252 [INFO] __main__: ============================================================
+2026-10-09 22:09:31,253 [INFO] __main__: Herbal Content Automation System — Phase 3
+2026-10-09 22:09:31,254 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-14 12:46:26,916 [INFO] database: Database initialized
+2026-10-14 12:46:51,355 [INFO] __main__: ============================================================
+2026-10-14 12:46:51,359 [INFO] __main__: Herbal Content Automation System — Phase 3
+2026-10-14 12:46:51,360 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-14 12:51:48,964 [INFO] database: Database initialized
+2026-10-14 12:51:57,054 [INFO] __main__: ============================================================
+2026-10-14 12:51:57,055 [INFO] __main__: Herbal Content Automation System — Phase 3
+2026-10-14 12:51:57,055 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-14 12:54:40,906 [INFO] database: Database initialized
+2026-10-14 12:54:50,679 [INFO] __main__: ============================================================
+2026-10-14 12:54:50,682 [INFO] __main__: Herbal Content Automation System — Phase 3
+2026-10-14 12:54:50,683 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-14 13:02:08,439 [INFO] database: Database initialized
+2026-10-14 13:02:18,562 [INFO] __main__: ============================================================
+2026-10-14 13:02:18,563 [INFO] __main__: Herbal Content Automation System — Phase 3
+2026-10-14 13:02:18,563 [INFO] __main__: Open: http://127.0.0.1:5000
+2026-10-14 13:02:18,564 [INFO] __main__: AI provider: Ollama | model: llama3.2:3b
+2026-10-14 13:02:18,565 [INFO] __main__: Test mode: True
+2026-10-14 13:02:18,565 [INFO] __main__: ============================================================
+2026-10-14 13:02:18,632 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-14 13:02:18,633 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-14 13:06:36,838 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:36] "GET / HTTP/1.1" 200 -
+2026-10-14 13:06:37,217 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:37] "GET /static/style.css HTTP/1.1" 200 -
+2026-10-14 13:06:37,250 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:37] "GET /static/app.js HTTP/1.1" 200 -
+2026-10-14 13:06:37,533 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:37] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:06:37,536 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-10-14 13:06:37,539 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:37] "GET /api/logs HTTP/1.1" 200 -
+2026-10-14 13:06:39,593 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:39] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-14 13:06:47,513 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:47] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:06:57,502 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:06:57] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:07:07,502 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:07] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:07:17,534 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:17] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:07:27,506 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:27] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:07:30,586 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:30] "GET /products HTTP/1.1" 200 -
+2026-10-14 13:07:30,615 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:07:30,635 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:30] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:07:30,718 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:30] "GET /api/products HTTP/1.1" 200 -
+2026-10-14 13:07:37,708 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:37] "GET /posts HTTP/1.1" 200 -
+2026-10-14 13:07:37,730 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:07:37,753 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:37] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:07:37,812 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:37] "GET /api/posts HTTP/1.1" 200 -
+2026-10-14 13:07:42,368 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "GET /images HTTP/1.1" 200 -
+2026-10-14 13:07:42,396 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:07:42,410 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:07:42,475 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-14 13:07:42,481 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-14 13:07:42,524 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "GET /api/images/preview/21/product?t=1791965262496 HTTP/1.1" 200 -
+2026-10-14 13:07:42,530 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "GET /api/images/preview/21/blog?t=1791965262496 HTTP/1.1" 200 -
+2026-10-14 13:07:42,534 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "GET /api/images/preview/22/blog?t=1791965262496 HTTP/1.1" 200 -
+2026-10-14 13:07:42,543 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:42] "GET /api/images/preview/22/product?t=1791965262496 HTTP/1.1" 200 -
+2026-10-14 13:07:46,753 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:46] "GET /post-images HTTP/1.1" 200 -
+2026-10-14 13:07:46,783 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:07:46,801 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:46] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:07:46,840 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:46] "GET /api/post-images/stats HTTP/1.1" 200 -
+2026-10-14 13:07:46,843 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:46] "GET /api/post-images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-14 13:07:49,403 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:49] "GET /export HTTP/1.1" 200 -
+2026-10-14 13:07:49,438 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:07:49,453 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:49] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:07:51,545 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:51] "GET /wordpress HTTP/1.1" 200 -
+2026-10-14 13:07:51,575 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:07:51,598 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:51] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:07:53,356 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:53] "GET /settings HTTP/1.1" 200 -
+2026-10-14 13:07:53,382 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:07:53,404 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:53] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:07:57,039 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:57] "GET /logs HTTP/1.1" 200 -
+2026-10-14 13:07:57,074 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:07:57,089 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:57] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:07:57,130 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:57] "GET /api/logs HTTP/1.1" 200 -
+2026-10-14 13:07:59,355 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:07:59] "GET /api/logs HTTP/1.1" 200 -
+2026-10-14 13:08:03,075 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:03] "GET /posts HTTP/1.1" 200 -
+2026-10-14 13:08:03,131 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:03] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:08:03,154 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:08:03,174 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:03] "GET /api/posts HTTP/1.1" 200 -
+2026-10-14 13:08:03,923 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:03] "GET /products HTTP/1.1" 200 -
+2026-10-14 13:08:03,958 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:08:04,026 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:04] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:08:04,071 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:04] "GET /api/products HTTP/1.1" 200 -
+2026-10-14 13:08:04,970 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:04] "GET / HTTP/1.1" 200 -
+2026-10-14 13:08:05,007 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:08:05,018 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:05] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:08:05,089 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:05] "GET /api/logs HTTP/1.1" 200 -
+2026-10-14 13:08:05,099 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:05] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:08:07,762 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:07] "POST /api/settings/test-ollama HTTP/1.1" 200 -
+2026-10-14 13:08:15,989 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:15] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:08:25,998 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:25] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:08:35,988 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:35] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:08:45,997 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:45] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:08:55,994 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:08:55] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:09:05,987 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:09:05] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:09:15,990 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:09:15] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:10:06,247 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:10:06] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:11:05,987 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:11:05] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:12:05,987 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:12:05] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:13:05,984 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:13:05] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:14:06,007 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:14:06] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:14:48,948 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:14:48] "GET /api/stats HTTP/1.1" 200 -
+2026-10-14 13:14:51,534 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:14:51] "GET /products HTTP/1.1" 200 -
+2026-10-14 13:14:51,593 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:14:51] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:14:51,609 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:14:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:14:51,685 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:14:51] "GET /api/products HTTP/1.1" 200 -
+2026-10-14 13:15:07,035 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:15:07] "POST /api/products/add HTTP/1.1" 200 -
+2026-10-14 13:15:07,165 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:15:07] "GET /api/products HTTP/1.1" 200 -
+2026-10-14 13:22:27,488 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:27] "GET /images HTTP/1.1" 200 -
+2026-10-14 13:22:27,953 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-10-14 13:22:28,102 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:28] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-10-14 13:22:28,659 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:28] "GET /api/images/stats HTTP/1.1" 200 -
+2026-10-14 13:22:28,852 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:28] "GET /api/images/list?page=1&status=all HTTP/1.1" 200 -
+2026-10-14 13:22:29,677 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:29] "GET /api/images/preview/21/product?t=1791966148923 HTTP/1.1" 200 -
+2026-10-14 13:22:30,363 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:30] "GET /api/images/preview/21/blog?t=1791966148923 HTTP/1.1" 200 -
+2026-10-14 13:22:31,107 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:31] "GET /api/images/preview/22/product?t=1791966148923 HTTP/1.1" 200 -
+2026-10-14 13:22:31,411 [INFO] werkzeug: 127.0.0.1 - - [14/Oct/2026 13:22:31] "GET /api/images/preview/22/blog?t=1791966148923 HTTP/1.1" 200 -

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Settings{% endblock %}
+{% block content %}
+<h1>Settings</h1>
+
+<div class="card">
+  <h2>AI Model (Ollama)</h2>
+  <p class="hint">Ollama runs globally on your PC, not inside Python.</p>
+  <label>Ollama URL</label>
+  <input type="text" id="ollama_url" value="{{ config.OLLAMA_BASE_URL }}">
+  <label>Model Name</label>
+  <input type="text" id="ollama_model" value="{{ config.OLLAMA_MODEL }}">
+  <button class="btn" onclick="testOllama()">🔍 Test Connection</button>
+  <div id="ollama-test" class="result"></div>
+</div>
+
+<div class="card">
+  <h2>WordPress</h2>
+  <label>Site URL</label>
+  <input type="text" id="wp_url" value="{{ config.WP_BASE_URL }}" placeholder="https://yoursite.com">
+  <label>Username</label>
+  <input type="text" id="wp_user" value="{{ config.WP_USERNAME }}">
+  <label>Application Password</label>
+  <input type="password" id="wp_pass" value="{{ config.WP_APP_PASSWORD }}">
+</div>
+
+<div class="card">
+  <h2>Generation</h2>
+  <label>Minimum Words</label>
+  <input type="number" id="min_words" value="{{ config.MIN_WORD_COUNT }}">
+  <label>Batch Size</label>
+  <input type="number" id="batch_size" value="{{ config.BATCH_SIZE }}">
+  <label>Duplicate Similarity Limit (0–1)</label>
+  <input type="number" step="0.01" id="sim_threshold" value="{{ config.SIMILARITY_THRESHOLD }}">
+  <label><input type="checkbox" id="test_mode" {% if config.TEST_MODE %}checked{% endif %}> Test Mode (safe)</label>
+</div>
+
+<button class="btn" onclick="saveSettings()">💾 Save All</button>
+{% endblock %}
+{% block scripts %}
+<script>
+async function testOllama(){
+  const r = await fetch('/api/settings/test-ollama', {method:'POST'});
+  const d = await r.json();
+  document.getElementById('ollama-test').innerHTML = d.ok
+    ? `✅ Connected. Models: ${d.models.join(', ')}`
+    : `❌ ${d.message}`;
+}
+async function saveSettings(){
+  const data = {
+    OLLAMA_BASE_URL: document.getElementById('ollama_url').value,
+    OLLAMA_MODEL: document.getElementById('ollama_model').value,
+    WP_BASE_URL: document.getElementById('wp_url').value,
+    WP_USERNAME: document.getElementById('wp_user').value,
+    WP_APP_PASSWORD: document.getElementById('wp_pass').value,
+    MIN_WORD_COUNT: document.getElementById('min_words').value,
+    BATCH_SIZE: document.getElementById('batch_size').value,
+    SIMILARITY_THRESHOLD: document.getElementById('sim_threshold').value,
+    TEST_MODE: document.getElementById('test_mode').checked ? 'true' : 'false'
+  };
+  const r = await fetch('/api/settings/save', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(data)
+  });
+  const d = await r.json();
+  toast(d.ok ? '✓ Saved. Restart app for changes.' : 'Failed', !d.ok);
+}
+</script>
+{% endblock %}

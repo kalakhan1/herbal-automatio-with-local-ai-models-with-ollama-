@@ -1,0 +1,65 @@
+"""Configuration loader — no external dependencies."""
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+
+# ------------------------------------------------------------
+# Manual .env loader (no python-dotenv needed)
+# ------------------------------------------------------------
+_env_path = BASE_DIR / ".env"
+if _env_path.exists():
+    try:
+        for _line in _env_path.read_text(encoding="utf-8").splitlines():
+            _line = _line.strip()
+            if not _line or _line.startswith("#") or "=" not in _line:
+                continue
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip())
+    except Exception:
+        pass
+
+
+class Config:
+    # Paths
+    BASE_DIR = BASE_DIR
+    DATA_DIR = BASE_DIR / "data"
+    LOGS_DIR = BASE_DIR / "logs"
+    UPLOADS_DIR = BASE_DIR / "uploads"
+    PRODUCT_IMG_DIR = UPLOADS_DIR / "products"
+    BLOG_IMG_DIR = UPLOADS_DIR / "blogs"
+    OUTPUT_DIR = BASE_DIR / "output"
+    DB_PATH = DATA_DIR / "herbal.db"
+
+    # Ollama
+    OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+    OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2:3b")
+    OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "300"))
+
+    # WordPress
+    WP_BASE_URL = os.getenv("WP_BASE_URL", "").rstrip("/")
+    WP_USERNAME = os.getenv("WP_USERNAME", "")
+    WP_APP_PASSWORD = os.getenv("WP_APP_PASSWORD", "")
+
+    # Generation
+    MIN_WORD_COUNT = int(os.getenv("MIN_WORD_COUNT", "800"))
+    # Research (optional — disable if slow)
+    RESEARCH_ENABLED = os.getenv("RESEARCH_ENABLED", "false").lower() == "true"
+    RESEARCH_TIMEOUT = int(os.getenv("RESEARCH_TIMEOUT", "10"))
+    BATCH_SIZE = int(os.getenv("BATCH_SIZE", "3"))
+    SIMILARITY_THRESHOLD = float(os.getenv("SIMILARITY_THRESHOLD", "0.82"))
+    TEST_MODE = os.getenv("TEST_MODE", "true").lower() == "true"
+    TEST_PRODUCTS = int(os.getenv("TEST_PRODUCTS", "3"))
+
+    # Flask
+    FLASK_PORT = int(os.getenv("FLASK_PORT", "5000"))
+    FLASK_SECRET_KEY = os.getenv("FLASK_SECRET_KEY", "dev-secret-change-me")
+
+    @classmethod
+    def ensure_dirs(cls):
+        for d in [cls.DATA_DIR, cls.LOGS_DIR, cls.UPLOADS_DIR,
+                  cls.PRODUCT_IMG_DIR, cls.BLOG_IMG_DIR, cls.OUTPUT_DIR]:
+            d.mkdir(parents=True, exist_ok=True)
+
+
+Config.ensure_dirs()

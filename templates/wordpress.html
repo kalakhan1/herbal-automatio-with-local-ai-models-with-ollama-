@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}WordPress{% endblock %}
+{% block content %}
+<h1>WordPress</h1>
+
+<div class="card">
+  <h2>Connection</h2>
+  <p class="hint">Configure WP credentials in Settings first.</p>
+  <button class="btn" onclick="testConn()">🔌 Test Connection</button>
+  <div id="testResult" class="result"></div>
+</div>
+
+<div class="card">
+  <h2>Upload Images</h2>
+  <p class="hint">Uploads assigned images to WP Media Library.</p>
+  <label>How many to upload now?</label>
+  <input type="number" id="img_limit" value="20" min="1" max="500">
+  <button class="btn" onclick="uploadImages()">⬆ Upload Images</button>
+  <div id="uploadResult" class="result"></div>
+</div>
+
+<div class="card">
+  <h2>Create Blog Drafts</h2>
+  <p class="hint">Creates blog posts as DRAFTS. Nothing published without your review.</p>
+  <label>How many to create now?</label>
+  <input type="number" id="post_limit" value="5" min="1" max="100">
+  <label><input type="checkbox" id="dry_run"> Dry run (preview only, don't create)</label>
+  <button class="btn" onclick="createDrafts(false)">📝 Create Drafts</button>
+  <button class="btn secondary" onclick="createDrafts(true)">👁 Dry Run (preview)</button>
+  <div id="draftResult" class="result"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+async function testConn(){
+  const el = document.getElementById('testResult');
+  el.textContent = 'Testing…';
+  const r = await fetch('/api/wp/test', {method: 'POST'});
+  const d = await r.json();
+  el.innerHTML = d.ok
+    ? `<span style="color:#22c55e">✓ ${d.message}</span>`
+    : `<span style="color:#f87171">✗ ${d.message}</span>`;
+}
+
+async function uploadImages(){
+  const limit = parseInt(document.getElementById('img_limit').value) || 20;
+  const el = document.getElementById('uploadResult');
+  el.textContent = `Uploading up to ${limit}…`;
+  const r = await fetch('/api/wp/upload-images', {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({limit})
+  });
+  const d = await r.json();
+  el.innerHTML = d.ok
+    ? `✓ Uploaded: ${d.uploaded}, Failed: ${d.failed_count}`
+    : `✗ ${d.error || 'Failed'}`;
+}
+
+async function createDrafts(dry){
+  const limit = parseInt(document.getElementById('post_limit').value) || 5;
+  const dry_run = dry || document.getElementById('dry_run').checked;
+  const el = document.getElementById('draftResult');
+  el.textContent = dry_run ? 'Previewing…' : 'Creating…';
+  const r = await fetch('/api/wp/create-drafts', {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({limit, dry_run})
+  });
+  const d = await r.json();
+  if (dry_run) {
+    el.innerHTML = `Preview: ${d.previews.length} posts would be created<br>`
+      + d.previews.map(p => `• ${p.title} (${p.slug})`).join('<br>');
+  } else {
+    el.innerHTML = `✓ Created: ${d.created}, Updated: ${d.updated}, Failed: ${d.failed_count}`;
+  }
+}
+</script>
+{% endblock %}
